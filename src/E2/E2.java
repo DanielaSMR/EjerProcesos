@@ -1,7 +1,8 @@
-import java.io.IOException;
+package E2;
+    import java.io.IOException;
 import java.util.Scanner;
 
-public class App {
+public class E2 {
     public static void main(String[] args) throws Exception {
         try {
             Scanner sc = new Scanner(System.in);
@@ -34,9 +35,10 @@ public class App {
             
             int result = p.waitFor();//Esperando a que el proceso hijo se muera
             int result2 = p.exitValue();//Para saber el valor del proceso hijo
+            
 
             System.out.println(" | Final proceso (" + p.pid() + "). | Resultado: " + result + " | Informacion adicional " + pInfo);
-
+            
             System.out.println("Final");
 
         } catch (IOException e) {
