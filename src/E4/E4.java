@@ -28,8 +28,9 @@ public class E4 {
                 /*
                 *Creamos un buffer para leer texto del InputStream de una forma sencilla
                 */
+                linea = br.readLine();
                 System.out.println("Salida de la terminal");
-                while((linea = br.readLine()) != null){
+                while(linea  != null){
                     System.out.println(linea);
                 }
                 /*
