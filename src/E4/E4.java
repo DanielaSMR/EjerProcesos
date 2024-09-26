@@ -9,7 +9,12 @@ public class E4 {
     public static void main(String[] args) throws Exception {
             
             Scanner sc = new Scanner(System.in);
-            ProcessBuilder pb = new ProcessBuilder("konsole");
+            //ProcessBuilder pb = new ProcessBuilder("konsole");
+            /*
+             * Konsole no va a funcionar ya que la salida de este sale en el entorno grafico
+             * por lo que si realmente queremos ver la salida tendriamos que verlo con el ls
+             */
+            ProcessBuilder pb = new ProcessBuilder("ls");
             String linea;
 
             pb.redirectErrorStream(true);
@@ -28,9 +33,8 @@ public class E4 {
                 /*
                 *Creamos un buffer para leer texto del InputStream de una forma sencilla
                 */
-                linea = br.readLine();
                 System.out.println("Salida de la terminal");
-                while(linea  != null){
+                while((linea = br.readLine()) != null){
                     System.out.println(linea);
                 }
                 /*
